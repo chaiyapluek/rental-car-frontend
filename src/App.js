@@ -10,6 +10,7 @@ import Register from "./pages/Register";
 import MyBooking from "./pages/MyBooking";
 import ProviderList from "./pages/ProviderList";
 import Provider from "./pages/Provider";
+import BookingHistory from "./pages/BookingHistory";
 
 function App() {
 	return (
@@ -22,6 +23,7 @@ function App() {
 						<Route path="/login" element={<Login />} />
 						<Route path="/register" element={<Register />} />
 						<Route path="/booking" element={<MyBooking />} />
+						<Route path="/history" element={<BookingHistory />}></Route>
 						<Route path="/providers/">
 							<Route path="" element={<ProviderList />} />
 							<Route path=":id" element={<Provider />} />
