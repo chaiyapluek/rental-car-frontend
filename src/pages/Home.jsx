@@ -29,16 +29,8 @@ function Home() {
           Book a new car
         </Link>
         <Link
-          to='/booking'
-          className='btn drop-shadow'
-          style={{ width: '80%', fontSize: '18px', fontWeight: 600 }}
-        >
-          <FaTicketAlt />
-          View My Booking
-        </Link>
-        <Link
           to='/history'
-          className='btn btn-reverse drop-shadow'
+          className='btn btn drop-shadow'
           style={{ width: '80%', fontSize: '18px', fontWeight: 600 }}
         >
           <FaHistory />

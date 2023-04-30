@@ -2,9 +2,18 @@ import axios from 'axios'
 
 import { API_URL } from '../../config/config'
 
-const getProviders = async () => {
+const getProviders = async (page, limit) => {
   try {
-    const response = await axios.get(API_URL + 'providers/')
+    const response = await axios.get(API_URL + `providers?page=${page}&limit=${limit}`)
+    return response.data
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+const getProvider = async (id) => {
+  try {
+    const response = await axios.get(API_URL + 'providers/' + id)
     return response.data
   } catch (error) {
     console.log(error)
@@ -90,6 +99,7 @@ const deleteBooking = async (user, bookingId) => {
 
 const userService = {
   getProviders,
+  getProvider,
   getBooking,
   createBooking,
   getMyBookings,

@@ -11,12 +11,14 @@ function ProviderCard({ provider }) {
 	};
 
 	return (
-		<div>
-			<ProviderImage images={provider.images}/>
-			<h3>{provider.name}</h3>
-			<p>{provider.tel}</p>
-			<p>{provider.address}</p>
-            <button className="btn" onClick={viewDetail}>view detail</button>
+		<div className="provider-card">
+			<img src={provider.pic} alt="provider pic"/>
+			<div className="provider-card__content">
+				<h3>{provider.name}</h3>
+				<p>Tel: {provider.tel}</p>
+				<p>Address: {provider.address}</p>
+            </div>
+			<button className="btn" onClick={viewDetail}>view detail</button>
 		</div>
 	);
 }

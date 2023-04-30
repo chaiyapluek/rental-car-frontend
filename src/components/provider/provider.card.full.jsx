@@ -1,4 +1,5 @@
 import ProviderImage from "./provider.image";
+import ProviderForm from "./provider.form";
 
 function ProviderCardFull({ provider }) {
 	const viewDetail = () => {
@@ -6,13 +7,10 @@ function ProviderCardFull({ provider }) {
 	};
 
 	return (
-		<div>
+		<>
 			<ProviderImage images={provider.images}/>
-			<h3>{provider.name}</h3>
-			<p>{provider.tel}</p>
-			<p>{provider.address}</p>
-            <button className="btn" onClick={viewDetail}>Book now</button>
-		</div>
+			<ProviderForm provider={provider}/>
+		</>
 	);
 }
 

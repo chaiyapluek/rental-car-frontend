@@ -33,7 +33,9 @@ export default function ProviderForm({ provider, fetchData }) {
     try {
       await userService.createBooking(user, provider, apptDate)
       toast.success('Booking successful!')
-      fetchData()
+      if(fetchData){
+        fetchData()
+      }
     } catch (error) {
       if (error.response) {
         toast.error(`Request failed with status code ${error.response.status}`)
